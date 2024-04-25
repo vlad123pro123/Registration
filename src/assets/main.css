@@ -1,0 +1,66 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+h1,h2,h3,h4{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+button{
+    border: 0;
+}
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 833.6px;
+    background: url(../assets/img/image36.png) no-repeat;
+    background-size: cover;
+    position: relative; /* Добавляем позиционирование, чтобы псевдоэлемент был внутри контейнера */
+    overflow: hidden;
+}
+.activeOne{
+    display: flex;
+}
+.closeOne{
+    display: none;
+}
+.activeTwo{
+    display:flex;
+}
+.closeTwo{
+    display: none;
+}
+.active {
+    background: rgba(23, 24, 28, 0.9);
+    color: white;
+}
+.noactive{
+    background: rgba(31, 33, 38, 0.9);
+    color: white;
+}
+.noactivev{
+    background: rgba(31, 33, 38, 0.9);
+    color: white;
+}
+.activev{
+    background: rgba(23, 24, 28, 0.9);
+    color: white;
+}
+
+
