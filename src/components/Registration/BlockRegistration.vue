@@ -34,6 +34,8 @@ const props = defineProps( {
   }
 });
 const inputType = ref(props.initialType);
+
+const isShowPassword = ref(false);
 </script>
 
 <template>
@@ -41,9 +43,9 @@ const inputType = ref(props.initialType);
       <i class="fa fa-search"> <img :src="img" alt="#"></i>
       <div class="block-input-label">
         <span>{{label}}</span>
-        <input :type="inputType" :id="idInput" label="inputField" :placeholder="Placeh" v-model="model">
+        <input :type="isShowPassword? 'text' : inputType" :id="idInput" label="inputField" :placeholder="Placeh" v-model="model">
       </div>
-      <img @click="inputType = inputType === 'password' ? 'text' : 'password'" class="password-control" :src="ImgGlaz">
+      <img @click="isShowPassword = true" class="password-control" :src="ImgGlaz">
   </div>
 </template>
 
