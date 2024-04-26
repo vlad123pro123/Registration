@@ -11,6 +11,15 @@ import ResetInput from "@/components/Reset/ResetInput.vue";
 import {reactive, ref} from "vue";
 
 const showPassword = ref(false);
+const inputType = ref('password');
+const TypeLogEmail = ref('text');
+const UserPaswordOne = ref('');
+const UserPaswordTwo = ref('');
+const UserLogin = ref('');
+const UserEmail = ref('');
+const PanelErrorMes = ref('')
+const isValidEmail = ref(true);
+
 const showPanel = reactive( {
   isActiveOne:true,
   hasErrorTwo:true,
@@ -19,13 +28,6 @@ const showPanel = reactive( {
   hasErrorRest:true,
   isActivePaneReg:true
 });
-
-const UserPaswordOne = ref('');
-const UserPaswordTwo = ref('');
-const UserLogin = ref('');
-const UserEmail = ref('');
-const PanelErrorMes = ref('')
-const isValidEmail = ref(true);
 
 function OnRegistr() {
   showPanel.isActiveOne = true;
@@ -82,8 +84,6 @@ function Reg() {
   }
 }
 
-const inputType = ref('password');
-const TypeLogEmail = ref('text');
 </script>
 
 <template>
@@ -196,7 +196,6 @@ h3{
   border-radius: 10px;
   background: rgba(23, 24, 28, 0.9);
   margin: auto;
-
 }
 .MesErrorNot{
   display:none;
@@ -204,7 +203,6 @@ h3{
 .MesErrorActiv{
   display:flex;
 }
-
 .MesSuccesActiv{
   display:flex;
 }
